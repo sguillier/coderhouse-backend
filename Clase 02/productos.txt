@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Martillo",
+    "price": 890,
+    "thumbnail": "https://cdn1.iconfinder.com/data/icons/construction-tool-line-foreman-equipment/512/Hammer-512.png",
+    "id": 2
+  },
+  {
+    "title": "Serrucho",
+    "price": 1200,
+    "thumbnail": "https://cdn1.iconfinder.com/data/icons/construction-tool-line-foreman-equipment/512/Saw-512.png",
+    "id": 3
+  },
+  {
+    "title": "Atornillador",
+    "price": 480,
+    "thumbnail": "https://cdn1.iconfinder.com/data/icons/construction-tool-line-foreman-equipment/512/Screwdriver-512.png",
+    "id": 4
+  }
+]
