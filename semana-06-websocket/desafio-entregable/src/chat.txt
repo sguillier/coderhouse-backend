@@ -1,0 +1,14 @@
+[
+  {
+    "mail": "sebastian@correo.com",
+    "msg": "Hola mundo",
+    "hora": "[31-10-2021 23:00:45]",
+    "id": 1
+  },
+  {
+    "mail": "mundo@correo.com",
+    "msg": "Hola!!!",
+    "hora": "[31-10-2021 23:01:05]",
+    "id": 2
+  }
+]
