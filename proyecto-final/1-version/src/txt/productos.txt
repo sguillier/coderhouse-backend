@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "nombre": "Caja",
+    "precio": "123",
+    "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png"
+  },
+  {
+    "nombre": "Goma",
+    "precio": "234",
+    "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/bag-pack-container-school-256.png",
+    "id": 2
+  }
+]

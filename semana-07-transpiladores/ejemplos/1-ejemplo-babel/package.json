@@ -1,0 +1,20 @@
+{
+  "name": "1-ejemplo-babel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "origen.js",
+  "dependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node origen.js",
+    "build": "babel ./origen.js -o ./destino.js -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

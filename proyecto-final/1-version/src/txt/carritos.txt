@@ -1,0 +1,46 @@
+[
+  {
+    "creado": "13/11/2021 00:56:11",
+    "modificado": "13/11/2021 00:56:11",
+    "productos": [
+      {
+        "id": 1,
+        "nombre": "Caja",
+        "precio": "123",
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png",
+        "q": 2
+      },
+      {
+        "nombre": "Goma",
+        "precio": "234",
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/bag-pack-container-school-256.png",
+        "id": 2,
+        "q": 2
+      }
+    ],
+    "total": 714,
+    "id": 1
+  },
+  {
+    "id": 2,
+    "creado": "13/11/2021 00:56:13",
+    "modificado": "13/11/2021 00:57:33",
+    "productos": [
+      {
+        "id": 1,
+        "nombre": "Caja",
+        "precio": "123",
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png",
+        "q": 1
+      },
+      {
+        "nombre": "Goma",
+        "precio": "234",
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/bag-pack-container-school-256.png",
+        "id": 2,
+        "q": 0
+      }
+    ],
+    "total": 123
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "name": "3-typescript",
+  "version": "1.0.0",
+  "description": "* Creamos un proyecto de Node.js con npm init -y\r * Instalamos el TSC mediante npm: npm i typescript\r * Creamos un archivo index.ts con contenido en Typescript\r * Transpilamos con el comando: node_modules/.bin/tsc ./index.ts -w\r * Verificamos que en nuestra carpeta de proyecto se encuentre index.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.4.4"
+  }
+}
