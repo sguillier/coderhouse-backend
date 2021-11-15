@@ -1,0 +1,17 @@
+{
+  "type": "module",
+  "name": "5-clase-contenedor-uso-async-await",
+  "version": "1.0.0",
+  "description": "Realizar un proyecto en Node.js que se conecte a la base de datos llamada ecommerce implementada en MariaDB y ejecute las siguientes procesos:\r 1- Debe crear una tabla llamada articulos con la siguiente estructura de campos: \r     - nombre tipo varchar 15 caracteres no nulo\r     - codigo tipo varchar 10 caracteres no nulo\r     - precio tipo float\r     - stock tipo entero\r     - id clave primaria autoincremet no nula\r 2- Insertar 5 articulos en esa tabla, con datos de prueba con stocks positivos \r 3- Listar la tabla mostrando los resultados en la consola\r 4- Borrar el articulo con id = 3\r 5- Actualizar el stock a 0 del articulo con id = 2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "knex": "^0.95.14",
+    "sqlite3": "^5.0.2"
+  }
+}
