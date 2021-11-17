@@ -2,7 +2,7 @@ import EditaProducto from './EditaProducto.js'
 
 
 const Productos = async () => {
-
+9
     const request = await fetch('http://localhost:8080/api/productos')
     const items = await request.json()
     console.log(items)
@@ -46,6 +46,8 @@ const Productos = async () => {
             method: 'DELETE',
             headers: {'Content-Type': 'application/json'}
         });
+
+        console.log(await response.json())
 
         Productos()
     }
