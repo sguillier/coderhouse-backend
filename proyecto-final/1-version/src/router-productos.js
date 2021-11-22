@@ -46,7 +46,6 @@ routerProductos.put('/:id', async (req, res) => {
 
 routerProductos.delete('/:id', async (req, res) => {
     if (admin === false) {
-        console.log("aqui")
         res.json("No tienes suficientes privilegios para esta peticion");
         return
     }
