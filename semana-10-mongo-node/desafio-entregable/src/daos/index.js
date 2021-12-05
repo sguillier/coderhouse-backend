@@ -1,7 +1,7 @@
 import { persistencia, mongooseConfig, txtConfig } from './configDaos.js'
 
 
-export default async function getObjetoColeccion(nombreColeccion) {
+export default async function getColeccion(nombreColeccion) {
     
     let objetoColeccion
 

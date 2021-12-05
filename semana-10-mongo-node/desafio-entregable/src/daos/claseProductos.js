@@ -1,6 +1,6 @@
 
-import getObjetoColeccion from "./index.js"
-const coleccionProductos =  await getObjetoColeccion('productos')
+import getColeccion from "./index.js"
+const coleccionProductos =  await getColeccion('productos')
 
 class claseProductos {
 

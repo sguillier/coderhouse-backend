@@ -1,20 +1,20 @@
 
-// import ContenedorArchivo from './../ContenedorArchivo.js'
-// const productos = new ContenedorArchivo('./productos.txt')
+import ContenedorArchivo from './../src/contenedores/ContenedorArchivo.js'
+const productos = new ContenedorArchivo('./productos.txt')
 
-// import ContenedorMemoria from './../ContenedorMemoria.js'
+// import ContenedorMemoria from './../src/contenedores/ContenedorMemoria.js'
 // const productos = new ContenedorMemoria()
 
-const esquema = {
-    id: { type: Number, required: true },
-    title: { type: String, required: true },
-    price: { type: Number, required: true }
-}
-const nombreColeccion = 'productos'
-import ContenedorMongoDb from '../ContenedorMongoose.js'
-const productos = new ContenedorMongoDb(nombreColeccion, esquema)
+// const esquema = {
+//     id: { type: Number, required: true },
+//     title: { type: String, required: true },
+//     price: { type: Number, required: true }
+// }
+// const nombreColeccion = 'productos'
+// import ContenedorMongoDb from './../src/contenedores/ContenedorMongoose.js'
+// const productos = new ContenedorMongoDb(nombreColeccion, esquema)
 
-// import ContenedorFirebase from './../ContenedorFirebase.js'
+// import ContenedorFirebase from './../src/contenedores/ContenedorFirebase.js'
 // const productos = new ContenedorFirebase('productos')
 
 

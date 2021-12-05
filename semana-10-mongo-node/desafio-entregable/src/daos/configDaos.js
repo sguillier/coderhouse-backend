@@ -1,9 +1,9 @@
 
 //
-// Aqui indicamos que tipo de persistencia usamos
-const persistencia = 'txt'
+// Aqui indicamos que tipo de persistencia usamos (hay que descomentar solo 1)
+// const persistencia = 'txt'
 // const persistencia = 'mongoose'
-// const persistencia = 'firebase'
+const persistencia = 'firebase'
 // const persistencia = 'memoria'
 
 
@@ -13,8 +13,8 @@ const persistencia = 'txt'
 const txtConfig = {
     fileName: {
         productos: 'productos.txt',
-        usuarios: 'usuarios.txt',
         carritos: 'carritos.txt',
+        usuarios: 'usuarios.txt',
     }
 }
 
@@ -29,13 +29,6 @@ const mongooseConfig = {
             precio: { type: Number, required: true },
             url: { type: String, required: false },
         },
-        usuarios: {
-            id: { type: Number, required: true },
-            name: { type: String, required: true },
-            lastName: { type: String, required: true },
-            email: { type: String, required: true },
-            privilegios: { type: String, required: true },
-        },
         carritos: {
             id: { type: Number, required: true },
             userId: { type: Number, required: false },
@@ -43,6 +36,13 @@ const mongooseConfig = {
             creado: { type: String, required: true },
             modificado: { type: String, required: true },
             total: { type: Number, required: true },
+        },
+        usuarios: {
+            id: { type: Number, required: true },
+            nombre: { type: String, required: true },
+            apellido: { type: String, required: true },
+            email: { type: String, required: true },
+            rol: { type: String, required: true },
         },
     },
 }
