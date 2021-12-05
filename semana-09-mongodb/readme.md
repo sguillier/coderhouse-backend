@@ -35,10 +35,12 @@ Una vez dentro de la terminal de mongo ejecutar 'load(script.js)'
 ## Comandos para levantar el servidor
 
 ### modo por defecto
-    mongod --dbpath “ruta/hacia/la/carpeta/miBaseMongo”
+    'mongod --dbpath “ruta/hacia/la/carpeta/miBaseMongo”'
 
-    * Deja abierta la ruta
-    localhost puerto 27017
+    por ejemplo
+    'mongod --dbpath ./DB'
+
+    * Deja abierta la ruta localhost puerto 27017
 
 ### modo seguro
     mongod --dbpath “ruta/hacia/la/carpeta/miBaseMongo”  --auth
@@ -58,3 +60,15 @@ Una vez dentro de la terminal de mongo ejecutar 'load(script.js)'
 
 ### Display grafico
     Con programa mongoDBCompass
+
+    * For a standalone:
+        'mongodb://mongodb0.example.com:27017'
+        'mongodb://localhost:27017'
+        
+
+    * For a standalone that enforces access control:
+        'mongodb://myDBReader:DifficultPassword@mongodb0.example.com:27017/?authSource=admin'
+
+
+
+
