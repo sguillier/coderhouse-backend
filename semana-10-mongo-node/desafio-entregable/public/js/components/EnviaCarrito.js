@@ -1,7 +1,7 @@
 
 const EnviaCarrito = async () => {
 
-    // const request = await fetch('http://localhost:8080/api/carrito')
+    // const request = await fetch('http://localhost:8080/api/carritos')
     const request = await fetch('http://localhost:8080/api/productos')
     const items = await request.json()
     console.log(items)
@@ -95,7 +95,7 @@ const EnviaCarrito = async () => {
             productos: arrayCarrito,
             total: total
         }
-        const urlApi = 'http://localhost:8080/api/carrito'
+        const urlApi = 'http://localhost:8080/api/carritos'
         fetch(urlApi, {
             method: 'POST', // or 'PUT'
             body: JSON.stringify(data),

@@ -19,7 +19,7 @@ app.use(express.static('public'))
 /* ------------------------------------------------------ */
 /* Carga routers */
 app.use('/api/productos', routerProductos)
-app.use('/api/carrito', routerCarritos)
+app.use('/api/carritos', routerCarritos)
 
 
 /* ------------------------------------------------------ */

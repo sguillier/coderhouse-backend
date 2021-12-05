@@ -1,6 +1,6 @@
 
 import getObjetoColeccion from "./index.js"
-const coleccionCarritos =  await getObjetoColeccion('carritos')
+const coleccionCarritos = await getObjetoColeccion('carritos')
 
 class claseCarritos {
 
@@ -8,29 +8,54 @@ class claseCarritos {
         this.carritos = coleccionCarritos
     }
 
-    getAllCarritos = async () => {
+    getAllCarts = async () => {
         return await this.carritos.getAll()
     }
 
-    getCarritoById = async (id) => {
+    getCartById = async (id) => {
         return await this.carritos.getById(id)
     }
 
-    saveCarrito = async (item) => {
+
+    getAllProductsFromCartByCartId = async (id) => {
+        const carrito = await this.carritos.getById(id)
+        return carrito.productos
+    }
+
+
+    saveCart = async (item) => {
         return await this.carritos.save(item)
     }
 
-    saveCarritoById = async (id, item) => {
+    saveCartById = async (id, item) => {
         return await this.carritos.saveById(id, item)
     }
-    
-    deleteCarritoById = async (id) => {
+
+
+    addProductsToCartByCartId = async (id, newProductos) => {
+        const carrito = await this.carritos.getById(id)
+        carrito.productos.push(newProductos)
+        return await this.carritos.saveById(id, carrito)
+    }
+
+
+    deleteCartById = async (id) => {
         return await this.carritos.deleteById(id)
     }
 
-    deleteAllCarritos = async () => {
+    deleteAllCarts = async () => {
         return await this.carritos.deleteAll()
     }
+    
+    
+    deleteProductByIdFromCartByCartId = async (CartId, ProductId) => {
+        let carrito = await this.carritos.getById(id)
+        const newProductos = carrito.productos.filter(e => e.id !== ProductId)
+        carrito.productos = newProductos
+
+        return await this.carritos.saveById(CartId, carrito)
+    }
+
 
 }
 

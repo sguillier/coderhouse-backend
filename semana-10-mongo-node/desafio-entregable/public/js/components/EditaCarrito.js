@@ -92,7 +92,7 @@ const EditaCarrito = async (carrito) => {
             total: total
         }
         
-        const urlApi = 'http://localhost:8080/api/carrito/' + carrito.id
+        const urlApi = 'http://localhost:8080/api/carritos/' + carrito.id
         fetch(urlApi, {
             method: 'PUT', // or 'POST'
             body: JSON.stringify(data),

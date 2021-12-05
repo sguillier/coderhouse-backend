@@ -3,7 +3,7 @@ import EditaCarrito from "./EditaCarrito.js"
 
 const Carritos = async () => {
 
-    const request = await fetch('http://localhost:8080/api/carrito')
+    const request = await fetch('http://localhost:8080/api/carritos')
     const items = await request.json()
     console.log(items)
 
@@ -42,7 +42,7 @@ const Carritos = async () => {
 
 
     const eliminar = async (id) => {
-        const urlApi = 'http://localhost:8080/api/carrito/' + id
+        const urlApi = 'http://localhost:8080/api/carritos/' + id
         
         const response = await fetch(urlApi, {
             method: 'DELETE',

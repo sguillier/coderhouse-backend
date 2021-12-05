@@ -8,7 +8,7 @@ export default async function getObjetoColeccion(nombreColeccion) {
     switch (persistencia) {
         case 'txt':
             const { default: ContenedorArchivo } = await import('./../contenedores/ContenedorArchivo.js')
-            objetoColeccion = new ContenedorArchivo(txtConfig.path[nombreColeccion])
+            objetoColeccion = new ContenedorArchivo(txtConfig.fileName[nombreColeccion])
             break
 
         case 'mongoose':

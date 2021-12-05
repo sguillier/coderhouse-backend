@@ -1,11 +1,11 @@
 
-
+import config from './configContenedores.js'
 import { promises as fs } from 'fs'
 
 
 class ContenedorArchivo {
-    constructor(rutaArchivo) {
-        this.rutaArchivo = rutaArchivo
+    constructor(fileName) {
+        this.rutaArchivo = config.txt.path + fileName
     }
 
 

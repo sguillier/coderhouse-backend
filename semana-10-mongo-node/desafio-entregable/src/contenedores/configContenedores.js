@@ -5,11 +5,12 @@
 // y como estos se conectan con sus respectivas bases de datos.
 // Intentar no editar
 
+//console.log(import.meta.url)
 
 
 export default {
-    fileSystem: {
-        path: './DB'
+    txt: {
+        path: './src/contenedores/data/'
     },
     mongoose: {
         stringConexion: 'srv+mongodb://localhost/coderhouse',
