@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "author": {
+      "mail": "sebastian@correo.com",
+      "nombre": "Sebastian",
+      "edad": "39",
+      "alias": "seba",
+      "apellido": "Guillier",
+      "avatar": "https://cdn2.iconfinder.com/data/icons/avatars-60/5985/13-Captain-512.png"
+    },
+    "text": "Hola Mundo",
+    "hora": "[11/12/2021 23:29:26]"
+  },
+  {
+    "id": 2,
+    "author": {
+      "mail": "sebastian@correo.com",
+      "nombre": "Sebastian",
+      "edad": "39",
+      "alias": "seba",
+      "apellido": "Guillier",
+      "avatar": "https://cdn2.iconfinder.com/data/icons/avatars-60/5985/13-Captain-512.png"
+    },
+    "text": "Hola po",
+    "hora": "[11/12/2021 23:29:36]"
+  },
+  {
+    "id": 3,
+    "author": {
+      "mail": "sebastian@correo.com",
+      "nombre": "Sebastian",
+      "edad": "39",
+      "alias": "seba",
+      "apellido": "Guillier",
+      "avatar": "https://cdn2.iconfinder.com/data/icons/avatars-60/5985/13-Captain-512.png"
+    },
+    "text": "Bien po",
+    "hora": "[11/12/2021 23:29:41]"
+  },
+  {
+    "id": 4,
+    "author": {
+      "mail": "sebastian@correo.com",
+      "nombre": "Sebastian",
+      "edad": "39",
+      "alias": "seba",
+      "apellido": "Guillier",
+      "avatar": "https://cdn2.iconfinder.com/data/icons/avatars-60/5985/13-Captain-512.png"
+    },
+    "text": "Todo super",
+    "hora": "[11/12/2021 23:29:46]"
+  }
+]

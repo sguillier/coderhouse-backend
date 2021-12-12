@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "creado": "5/12/2021 13:28:15",
+    "modificado": "5/12/2021 13:33:15",
+    "productos": [
+      {
+        "id": 1,
+        "nombre": "Calculadora",
+        "precio": "123",
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png",
+        "q": 4
+      },
+      {
+        "id": 2,
+        "nombre": "Mochila",
+        "precio": "569",
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/bag-pack-container-school-256.png",
+        "q": 4
+      }
+    ],
+    "total": 2768
+  },
+  {
+    "id": 2,
+    "creado": "5/12/2021 13:28:15",
+    "modificado": "5/12/2021 13:33:15",
+    "productos": [
+      {
+        "id": 1,
+        "nombre": "Calculadora",
+        "precio": "123",
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png",
+        "q": 5
+      },
+      {
+        "id": 2,
+        "nombre": "Mochila",
+        "precio": "569",
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/bag-pack-container-school-256.png",
+        "q": 0
+      }
+    ],
+    "total": 615
+  },
+  {
+    "id": 3,
+    "creado": "5/12/2021 13:28:15",
+    "modificado": "5/12/2021 13:33:15",
+    "productos": [
+      {
+        "id": 1,
+        "nombre": "Calculadora",
+        "precio": "123",
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png",
+        "q": 8
+      },
+      {
+        "id": 2,
+        "nombre": "Mochila",
+        "precio": "569",
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/bag-pack-container-school-256.png",
+        "q": 1
+      }
+    ],
+    "total": 1553
+  }
+]

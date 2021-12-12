@@ -1,0 +1,18 @@
+{
+  "type": "module",
+  "name": "2-faker",
+  "version": "1.0.0",
+  "description": "Reformar el ejercicio anterior utilizado Faker para generar los objetos con datos aleatorios en español.\r A la ruta '/test' se le podrá pasar por query params la cantidad de objetos a generar:\r Ej. '/test?cant=30'. De no pasarle ningún valor, producirá 10 objetos.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "faker": "^5.5.3"
+  }
+}
