@@ -27,10 +27,24 @@ io.on('connection', async (socket) => {
 
 
 
+//--------------------------------------------
+// Session
+// import session from 'express-session'
+// import MongoStore from 'connect-mongo'
+// app.use(session({
+//     store: MongoStore.create({ mongoUrl: 'mongodb://localhost/sesiones' }),
+//     secret: 'entregaSemana12',
+//     resave: false,
+//     saveUninitialized: false,
+//     /* cookie: {maxAge: 40000 } */
+// }))
+
+
+
 
 //--------------------------------------------
 // Session
-import Sesiones from "./sessions/sesiones.js";
+import Sesiones from "./utils/sesiones.js";
 Sesiones(app)
 
 
@@ -38,7 +52,7 @@ Sesiones(app)
 
 
 //--------------------------------------------
-// Middlewares
+// Rutas test y publicas
 import routerProductosTest from './routers/routerProductosTest.js'
 
 app.use('/api/productos-test', routerProductosTest)

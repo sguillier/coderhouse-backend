@@ -5,8 +5,8 @@ await mensajes.deleteAllMessages()
 
 
 import claseProductos from '../daos/claseProductos.js'
-import denormalizeChat from './denormalizeChat.js';
-import normalizeChat from './normalizeChat.js';
+import denormalizeChat from '../utils/denormalizeChat.js';
+import normalizeChat from '../utils/normalizeChat.js';
 const productos = new claseProductos()
 // await productos.deleteAllProducts()
 
