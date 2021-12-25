@@ -10,7 +10,7 @@ export default async function Sesiones(app) {
         /* ----------------------------------------------------- */
         // store: MongoStore.create({ mongoUrl: 'mongodb://localhost/sesiones' }),   // Local, con esto funciona perfect
         store: MongoStore.create({ 
-            mongoUrl: 'mongodb+srv://coderhouse:coderhouse@myprimeratlas.2tr0z.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+            mongoUrl: 'mongodb+srv://coderhouse:coderhouse@myprimeratlas.2tr0z.mongodb.net/sesiones?retryWrites=true&w=majority'
         }),
         /* ----------------------------------------------------- */
 

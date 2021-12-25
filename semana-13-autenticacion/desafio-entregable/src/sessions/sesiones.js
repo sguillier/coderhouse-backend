@@ -1,6 +1,5 @@
 import session from 'express-session'
 import MongoStore from 'connect-mongo'
-// Tambien hay que tener instalado npm i mongodb
 
 
 export default async function Sesiones(app) {
@@ -9,19 +8,17 @@ export default async function Sesiones(app) {
         /* ----------------------------------------------------- */
         /*           Persistencia por mongoDB database           */
         /* ----------------------------------------------------- */
-        store: MongoStore.create({ mongoUrl: 'mongodb://localhost/sesiones' }),
-        // store: MongoStore.create({ 
-        //     mongoUrl: 'mongodb://coderhouse:<password>@myprimeratlas.2tr0z.mongodb.net?retryWrites=true&w=majority',
-        //     dbName: 'sesiones',
-        //     touchAfter: 3000
-        // }),
+        // store: MongoStore.create({ mongoUrl: 'mongodb://localhost/sesiones' }),   // Local, con esto funciona perfect
+        store: MongoStore.create({ 
+            mongoUrl: 'mongodb+srv://coderhouse:coderhouse@myprimeratlas.2tr0z.mongodb.net/sesiones?retryWrites=true&w=majority'
+        }),
         /* ----------------------------------------------------- */
 
         secret: 'palabranueva',
         resave: false,
         saveUninitialized: false,
         cookie: {
-            maxAge: 10000
+            maxAge: 60000
         }
     }))
 

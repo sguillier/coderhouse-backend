@@ -79,7 +79,7 @@ const Temp = async () => {
     if (res.state === 'on') {
         html = `
         <div class="session-display-content">
-            <h2> Bienbenido ${res.nombre} </h2>
+            <h2> Bienvenido ${res.nombre} </h2>
             <button id="logout-button">
                 Cerrar Session
             </button>
