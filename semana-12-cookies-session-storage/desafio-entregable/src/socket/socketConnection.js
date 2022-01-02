@@ -12,7 +12,7 @@ const productos = new claseProductos()
 
 
 export default async function socketConnection(socket, io){
-        
+    
     // Productos
     socket.emit('productos', await productos.getAllProducts() );
     socket.on('update-productos', async (e) => {

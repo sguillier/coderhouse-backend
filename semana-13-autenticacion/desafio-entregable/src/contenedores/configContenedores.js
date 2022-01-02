@@ -13,9 +13,8 @@ export default {
         path: './src/contenedores/data/'
     },
     mongoDb : {
-        uri: 'srv+mongodb://localhost/',
+        uri: "mongodb://localhost:27017/coderhouse",
         // uri = "mongodb+srv://coderhouse:coderhouse@cluster0.o0eqf.mongodb.net/coderhouse?retryWrites=true&w=majority",
-        db: 'coderhouse',
         options: {
             useNewUrlParser: true,
             useUnifiedTopology: true,

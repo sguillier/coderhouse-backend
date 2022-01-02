@@ -5,8 +5,8 @@ await mensajes.deleteAllMessages()
 
 
 import claseProductos from '../daos/claseProductos.js'
-import denormalizeChat from '../utils/denormalizeChat.js';
-import normalizeChat from '../utils/normalizeChat.js';
+// import denormalizeChat from './denormalizeChat.js';
+// import normalizeChat from './normalizeChat.js';
 const productos = new claseProductos()
 // await productos.deleteAllProducts()
 
@@ -26,10 +26,10 @@ export default async function socketConnection(socket, io){
     socket.on('update-chat', async (e) => {
         await mensajes.saveMessage(e)
         const arrayMensajes = await mensajes.getAllMessages()
-        // io.sockets.emit('chat', arrayMensajes );
+        io.sockets.emit('chat', arrayMensajes );
         
-        const chatNormalized = await normalizeChat(arrayMensajes)
-        io.sockets.emit('chat', chatNormalized );
+        // const chatNormalized = await normalizeChat(arrayMensajes)
+        // io.sockets.emit('chat', chatNormalized );
     })
     
 }

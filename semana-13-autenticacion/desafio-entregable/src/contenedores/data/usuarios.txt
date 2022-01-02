@@ -1,9 +1,0 @@
-[
-  {
-    "id": 1,
-    "nombre": "Sebastian",
-    "apellido": "Guillier",
-    "email": "sebastian@correo.com",
-    "rol": "admin"
-  }
-]
