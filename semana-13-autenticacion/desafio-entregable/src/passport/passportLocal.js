@@ -36,7 +36,8 @@ passport.use(
         password: createHash(password),
         firstname: req.body.firstname,
         lastname: req.body.lastname,
-        url: req.body.url,
+        age: req.body.age,
+        avatar: req.body.avatar,
       }
 
 

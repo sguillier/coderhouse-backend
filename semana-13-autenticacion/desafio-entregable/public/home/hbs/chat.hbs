@@ -20,10 +20,10 @@
 {{#if chat.length}}
 {{#each chat}}
 <p>
-    <span class="chat-mail"> {{this.author.mail}} </span>
+    <span class="chat-mail"> {{this.user.id}} </span>
     <span class="chat-hora"> {{this.hora}} </span> :
     <span class="chat-text"> {{this.text}} </span>
-    <img class="chat-img" src={{this.author.avatar}}>
+    <img class="chat-img" src={{this.user.avatar}}>
 </p>
 {{/each}}
 <hr>

@@ -1,6 +1,19 @@
 
 import express from "express";
 import session from "express-session";
+
+const sessionMiddleware = session({
+    secret: 'shhhhhhhhhhhhhhhhhhhhh',
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      maxAge: 60000,
+    },
+  })
+
+
+/* --------------------- PASSPORT --------------------------- */
+
 import passport from "./passport/passportLocal.js";
 
 
@@ -10,16 +23,8 @@ const app = express()
 
 /* --------------------- MIDDLEWARE --------------------------- */
 
-app.use(
-  session({
-    secret: 'shhhhhhhhhhhhhhhhhhhhh',
-    resave: false,
-    saveUninitialized: false,
-    cookie: {
-      maxAge: 60000,
-    },
-  })
-)
+app.use( sessionMiddleware )
+  
 
 app.use(passport.initialize())
 app.use(passport.session())
@@ -28,15 +33,6 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static('public'))
 
-/* --------------------- AUTH --------------------------- */
-
-function isAuth(req, res, next) {
-  if (req.isAuthenticated()) {
-    next()
-  } else {
-    res.redirect('/login')
-  }
-}
 
 /* --------------------- ROUTES --------------------------- */
 
@@ -73,58 +69,19 @@ app.get('/api/logout', (req, res) => {
 
 
 
-/* --------- INICIO ---------- */
-// app.get('/', isAuth, (req, res) => {
-//   res.redirect('/datos')
-// })
-
-// app.get('/home', (req, res) => {
-//   console.log('req.isAuthenticated();', req.isAuthenticated())
-//   if (req.isAuthenticated()) {
-//     res.redirect('/')
-//   }
-// })
-
-
-
 /* --------------------- SOCKET --------------------------- */
 
-
-// Socket
-import { createServer } from 'http';
-import { Server } from 'socket.io';
-const httpServer = createServer(app);
-const io = new Server(httpServer, { cors: { origin: '*' } });
-
-
-// Conexion Socket
 import socketConnection from "./socket/socketConnection.js";
-
-io.on('connection', async (socket) => {
-    console.log('Nuevo cliente conectado!');
-    await socketConnection(socket, io)
-});
-
-
-
+const httpServer = await socketConnection(app, sessionMiddleware, passport);
 
 
 
 /* --------- LISTEN ---------- */
-
-// const PORT = 8080
-// const server = app.listen(PORT, () => {
-//   console.log(`Servidor escuchando en el puerto ${PORT}`)
-// })
-// server.on('error', error => console.log(`Error en servidor: ${error}`))
-
 
 const PORT = 8080
 const connectedServer = httpServer.listen(PORT, () => {
     console.log(`Servidor http escuchando en el puerto ${connectedServer.address().port}`)
 })
 connectedServer.on('error', error => console.log(`Error en servidor ${error}`))
-
-
 
 

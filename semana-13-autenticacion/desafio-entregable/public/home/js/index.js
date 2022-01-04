@@ -37,14 +37,6 @@ formChat.addEventListener('submit', e => {
 
     const hora = new Date()
     const mensaje = {
-        author: {
-            mail: document.getElementById('chat-mail').value,
-            nombre: document.getElementById('chat-nombre').value,
-            edad: document.getElementById('chat-edad').value,
-            alias: document.getElementById('chat-alias').value,
-            apellido: document.getElementById('chat-apellido').value,
-            avatar: document.getElementById('chat-avatar').value,
-        },
         text: document.getElementById('chat-msg').value,
         hora: '[' + hora.toLocaleString() + ']'
     }
