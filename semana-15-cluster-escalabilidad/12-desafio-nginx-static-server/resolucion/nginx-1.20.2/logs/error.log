@@ -1,0 +1,4 @@
+2022/01/15 13:52:29 [error] 24352#18088: *1 CreateFile() "C:\Users\Sebastian\Downloads\nginx-1.20.2\nginx-1.20.2/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2022/01/16 13:03:26 [error] 15544#10720: *1 CreateFile() "C:\Users\Sebastian\coder\back-end\semana-15-cluster-escalabilidad\desafio-entregable\nginx-1.20.2/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2022/01/16 15:09:38 [notice] 16284#9988: signal process started
+2022/01/16 15:09:38 [error] 16284#9988: OpenEvent("Global\ngx_reload_508") failed (2: The system cannot find the file specified)
