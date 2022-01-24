@@ -1,7 +1,6 @@
 import { Router } from 'express'
 
 
-
 const calculoLento = () => {
 
     const N = 1000
