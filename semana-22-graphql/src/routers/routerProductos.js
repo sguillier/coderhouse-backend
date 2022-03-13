@@ -15,8 +15,7 @@ import {
 
 
 
-
-// Estos endpoints no los borraré, para que no se caigan los llamados del fron que no vayan a graphql
+// Estos endpoints no los borraré, para que no se caigan los llamados del front
 routerProductos.get('/', async (req, res) => {
     res.json(await getProductosControler({}))
 })
@@ -55,22 +54,21 @@ const schema = buildSchema(`
     url: String
   }
   type Producto {
-    id: ID!
+    id: Int
     nombre: String
     precio: Int
     url: String
   }
   type Query {
-    getProducto(id: ID!): Producto
-    getProductos: [Producto]
+    getProductoIdControler(id: Int): Producto
+    getProductosControler: [Producto]
   }
   type Mutation {
-    createProducto(datos: ProductoInput): Producto
-    updateProducto(id: ID!, datos: ProductoInput): Producto
-    deleteProducto(id: ID!): Producto
-  }
+    postProductoControler(nuevoProducto: ProductoInput, admin:Boolean): String
+    putProductoIdControler(id: Int, productoEditado: ProductoInput, admin:Boolean): String
+    deleteProductoIdControler(id: Int, admin:Boolean): String
+}
 `)
-
 
 
 
@@ -81,17 +79,13 @@ routerProductos.use(
         rootValue: {
             getProductosControler,
             getProductoIdControler,
-            // createProducto,
-            // updateProducto,
-            // deleteProducto,
+            postProductoControler,
+            putProductoIdControler,
+            deleteProductoIdControler,
         },
         graphiql: true,
     })
 )
-
-
-
-
 
 
 

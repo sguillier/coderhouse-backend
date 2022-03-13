@@ -1,8 +1,6 @@
 import claseProductos from '../persistencia/daos/claseProductos.js'
 const productos = new claseProductos()
 
-const admin = true
-
 const getProductosControler = async ({}) => {
     const arrayProductos = await productos.getAllProducts()
     return arrayProductos
@@ -18,16 +16,16 @@ const postProductoControler = async ({nuevoProducto, admin}) => {
         return "No tienes suficientes privilegios para esta peticion"
     }
     const id = await productos.saveProduct(nuevoProducto)
-    return "Porducto guardado con id:" + id
+    return "Producto guardado con id:" + id
 }
 
 
-const putProductoIdControler = async ({id, producto, admin}) => {
+const putProductoIdControler = async ({id, productoEditado, admin}) => {
     if (admin === false) {
         res.json("No tienes suficientes privilegios para esta peticion");
         return
     }
-    await productos.saveProductById(id, producto)
+    await productos.saveProductById(id, productoEditado)
     return `id:${id} Editado`
 }
 
