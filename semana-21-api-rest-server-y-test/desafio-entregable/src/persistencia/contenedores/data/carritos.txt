@@ -1,0 +1,127 @@
+[
+  {
+    "id": 3,
+    "creado": "12/2/2022 22:30:07",
+    "modificado": "12/2/2022 22:30:07",
+    "productos": [
+      {
+        "id": 2,
+        "nombre": "Goma",
+        "precio": "689",
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/bag-pack-container-school-256.png",
+        "q": 0
+      },
+      {
+        "id": 3,
+        "nombre": "Calculadora",
+        "precio": "348",
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png",
+        "q": 4
+      },
+      {
+        "id": 4,
+        "nombre": "Cuaderno",
+        "precio": "8900",
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/book-note-paper-school-256.png",
+        "q": 0
+      }
+    ],
+    "total": 1392,
+    "usuario": {
+      "id": "seba@correo.com",
+      "password": "$2b$10$e/egFx/V9VCK6iAs9HEZk.CkF.uAgx0ygvDjjA8ArGj9kqOuoMYry",
+      "firstname": "Sebastian",
+      "lastname": "Guillier",
+      "age": "39",
+      "avatar": "https://cdn2.iconfinder.com/data/icons/avatars-60/5985/13-Captain-256.png"
+    }
+  },
+  {
+    "id": 4,
+    "creado": "19/2/2022 16:44:15",
+    "modificado": "19/2/2022 16:44:15",
+    "productos": [
+      {
+        "id": 2,
+        "nombre": "Goma",
+        "precio": "689",
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/bag-pack-container-school-256.png",
+        "q": 2
+      },
+      {
+        "id": 3,
+        "nombre": "Calculadora",
+        "precio": "348",
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png",
+        "q": 2
+      },
+      {
+        "id": 4,
+        "nombre": "Cuaderno",
+        "precio": "8900",
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/book-note-paper-school-256.png",
+        "q": 2
+      },
+      {
+        "id": 5,
+        "nombre": "Reloj",
+        "precio": "890",
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/clock-stopwatch-timer-time-256.png",
+        "q": 3
+      }
+    ],
+    "total": 22544,
+    "usuario": {
+      "id": "seba@correo.com",
+      "password": "$2b$10$e/egFx/V9VCK6iAs9HEZk.CkF.uAgx0ygvDjjA8ArGj9kqOuoMYry",
+      "firstname": "Sebastian",
+      "lastname": "Guillier",
+      "age": "39",
+      "avatar": "https://cdn2.iconfinder.com/data/icons/avatars-60/5985/13-Captain-256.png"
+    }
+  },
+  {
+    "id": 5,
+    "creado": "19/2/2022 18:11:27",
+    "modificado": "19/2/2022 18:11:27",
+    "productos": [
+      {
+        "id": 2,
+        "nombre": "Goma",
+        "precio": "689",
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/bag-pack-container-school-256.png",
+        "q": 1
+      },
+      {
+        "id": 4,
+        "nombre": "Cuaderno",
+        "precio": "8900",
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/book-note-paper-school-256.png",
+        "q": 1
+      },
+      {
+        "id": 5,
+        "nombre": "Reloj",
+        "precio": "890",
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/clock-stopwatch-timer-time-256.png",
+        "q": 1
+      },
+      {
+        "id": 6,
+        "nombre": "Calculadora",
+        "precio": "690",
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png",
+        "q": 1
+      }
+    ],
+    "total": 11169,
+    "usuario": {
+      "id": "temp@correo.com",
+      "password": "$2b$10$v6dz/cAbscaPeaFEeh4k.eirN8UIEZ6x3rHPfC.MtBgeZkh9f5dHW",
+      "firstname": "temp",
+      "lastname": "temp",
+      "age": "13",
+      "avatar": "https://cdn2.iconfinder.com/data/icons/avatars-60/5985/12-Delivery_Man-256.png"
+    }
+  }
+]
