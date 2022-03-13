@@ -1,5 +1,13 @@
 # Comentario
 
-La implementación de este proyecto se puede ver en el siguiente link
 
-`https://back-end-pf-v3.herokuapp.com`
+## API REST Full
+La app ya se encuentra separada en backEnd (API Rest Full) y FrontEnd, la cual solo consume datos del backEnd. Modelo Data Wire.
+
+
+## Test
+La implementacion de test está en la ruta `test/test.js`.
+
+Para probar, ejecutar en la raiz `npm test`
+
+El test es sobre la API de productos

@@ -4,7 +4,7 @@ import { crearServidor } from '../src/server.js'
 
 
 
-describe('almacenador', () => {
+describe('Test de API Productos', () => {
     const servidor = crearServidor()
 
     before(async () => {
@@ -22,43 +22,21 @@ describe('almacenador', () => {
     //   })
 
     it('Agregamos un nuevo producto y lo borramos y el listado de productos sigue siendo el mismo', async () => {
+        let resGet
+        resGet = await axios.get('/api/productos')
+        const productosInicio = resGet.data
+        
+        const resPost = await axios.post('/api/productos', {
+            nombre: "Mapa",
+            precio: "1690",
+            url: "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png"
+        })
+        const idCreado = resPost.data
+        const resDelete = await axios.delete(`/api/productos/${idCreado}`)
 
-        let user
+        resGet = await axios.get('/api/productos')
+        const productosFinal = resGet.data
 
-        try {
-            user = await axios.post('/api/auth/register', {
-                "firstname": "Juan",
-                "lastname": "Perez",
-                "age": "20",
-                "usernumber": "123456789",
-                "username": "juanrios@correo.com",
-                "password": "123456",
-                "avatar": "https://cdn2.iconfinder.com/data/icons/avatars-60/5985/12-Delivery_Man-256.png",
-            })
-        } catch (err) {
-            user = await axios.post('/api/auth/login', {
-                "username": "juanperez@correo.com",
-                "password": "123456",
-            })
-            console.log('++++++++++++++')
-        }
-
-        // if (user.data.token) {
-        //     const token = user.data.token
-        //     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
-        // }
-
-        console.log('..................', user.config.data)
-
-        const estado = await axios.get('/api/auth/isauth')
-
-        // console.log('HOLALALALAL   ', estado)
-
-
-        // const cosasAntes = [...cosasDao.verTodas()]
-        // const cosa = { nombre: 'silla' }
-
-        // const { data: cosasActualizada } = await axios.post('/', cosa)
-        // assert.deepStrictEqual(cosasActualizada, [...cosasAntes, cosa])
+        assert.deepStrictEqual(productosFinal, productosInicio)
     })
 })

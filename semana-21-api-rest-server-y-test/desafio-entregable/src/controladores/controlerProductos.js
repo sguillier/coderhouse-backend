@@ -20,8 +20,8 @@ const postProductoControler = async (req, res) => {
         return
     }
     const nuevoProducto = req.body
-    await productos.saveProduct(nuevoProducto)
-    res.json(nuevoProducto);
+    const nuevoId = await productos.saveProduct(nuevoProducto)
+    res.json(nuevoId);
 }
 
 
