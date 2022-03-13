@@ -6,21 +6,21 @@
     "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/bag-pack-container-school-256.png"
   },
   {
-    "id": 4,
-    "nombre": "Cuaderno",
-    "precio": "8900",
-    "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/book-note-paper-school-256.png"
-  },
-  {
     "id": 5,
     "nombre": "Reloj",
     "precio": "890",
     "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/clock-stopwatch-timer-time-256.png"
   },
   {
-    "id": 6,
+    "id": 7,
+    "nombre": "Cuaderno",
+    "precio": "521",
+    "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/book-note-paper-school-256.png"
+  },
+  {
+    "id": 8,
     "nombre": "Calculadora",
-    "precio": "690",
+    "precio": "669",
     "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png"
   }
 ]

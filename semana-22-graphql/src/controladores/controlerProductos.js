@@ -3,47 +3,42 @@ const productos = new claseProductos()
 
 const admin = true
 
-const getProductosControler = async () => {
+const getProductosControler = async ({}) => {
     const arrayProductos = await productos.getAllProducts()
     return arrayProductos
-    // res.json(arrayProductos)
 }
 
-const getProductoIdControler = async (id) => {
+const getProductoIdControler = async ({id}) => {
     const producto = await productos.getProductById(id)
     return producto
 }
 
-const postProductoControler = async (req, res) => {
+const postProductoControler = async ({nuevoProducto, admin}) => {
     if (admin === false) {
-        res.json("No tienes suficientes privilegios para esta peticion");
-        return
+        return "No tienes suficientes privilegios para esta peticion"
     }
-    const nuevoProducto = req.body
-    await productos.saveProduct(nuevoProducto)
-    res.json(nuevoProducto);
+    const id = await productos.saveProduct(nuevoProducto)
+    return "Porducto guardado con id:" + id
 }
 
 
-const putProductoIdControler = async (req, res) => {
+const putProductoIdControler = async ({id, producto, admin}) => {
     if (admin === false) {
         res.json("No tienes suficientes privilegios para esta peticion");
         return
     }
-    const id = parseInt(req.params.id)
-    const producto = req.body
     await productos.saveProductById(id, producto)
-    res.json(`id:${id} Editado`)
+    return `id:${id} Editado`
 }
 
-const deleteProductoIdControler = async (req, res) => {
+const deleteProductoIdControler = async ({id, admin}) => {
+
     if (admin === false) {
-        res.json("No tienes suficientes privilegios para esta peticion");
+        return "No tienes suficientes privilegios para esta peticion"
         return
     }
-    const id = parseInt(req.params.id)
     await productos.deleteProductById(id)
-    res.json(`id:${id} Eliminado`)
+    return `id:${id} Eliminado`
 }
 
 

@@ -16,19 +16,35 @@ import {
 
 
 
-// Estos endpoints no los borraré, para que no se caigan los llamados del fron que no vayan a /graphql
+// Estos endpoints no los borraré, para que no se caigan los llamados del fron que no vayan a graphql
 routerProductos.get('/', async (req, res) => {
-    res.json(await getProductosControler())
+    res.json(await getProductosControler({}))
 })
 
 routerProductos.get('/:id', async (req, res) => {
     const id = parseInt(req.params.id)
-    res.json(await getProductoIdControler(id))
+    res.json(await getProductoIdControler({id}))
 })
 
-routerProductos.post('/', postProductoControler)
-routerProductos.put('/:id', putProductoIdControler)
-routerProductos.delete('/:id', deleteProductoIdControler)
+routerProductos.post('/', async (req, res) => {
+    const nuevoProducto = req.body
+    const admin = true
+    res.json(await postProductoControler({nuevoProducto, admin}))
+})
+
+routerProductos.put('/:id', async (req, res) => {
+    const id = parseInt(req.params.id)
+    const producto = req.body
+    const admin = true
+    res.json(await putProductoIdControler({id, producto, admin}))
+})
+
+routerProductos.delete('/:id', async (req,res) => {
+    const id = parseInt(req.params.id)
+    const admin = true
+    res.json(await deleteProductoIdControler({id, admin}))
+})
+
 
 
 
@@ -46,7 +62,7 @@ const schema = buildSchema(`
   }
   type Query {
     getProducto(id: ID!): Producto
-    getProductos(campo: String, valor: String): [Producto]
+    getProductos: [Producto]
   }
   type Mutation {
     createProducto(datos: ProductoInput): Producto
@@ -55,20 +71,23 @@ const schema = buildSchema(`
   }
 `)
 
-// routerProductos.use(
-//     '/graphql',
-//     graphqlHTTP({
-//         schema: schema,
-//         rootValue: {
-//             getProductos,
-//             getProducto,
-//             createProducto,
-//             updateProducto,
-//             deleteProducto,
-//         },
-//         graphiql: true,
-//     })
-// )
+
+
+
+routerProductos.use(
+    '/graphql',
+    graphqlHTTP({
+        schema: schema,
+        rootValue: {
+            getProductosControler,
+            getProductoIdControler,
+            // createProducto,
+            // updateProducto,
+            // deleteProducto,
+        },
+        graphiql: true,
+    })
+)
 
 
 
