@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+        integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+
+                <li class="nav-item">
+                    <a id="link-home" class="nav-link">Volver al Home</a>
+                </li>
+
+            </ul>
+        </div>
+        <div>
+            <button id="button-logout" type="button" class="btn btn-primary">Salir</button>
+        </div>
+    </nav>
+    
+    <div class="container mt-3">
+
+
+        <div class="container mt-3" id="main">
+            <div class="jumbotron">
+                <h1 id="chat-title">Centro de Mensajes</h1>
+                <br>
+
+
+                <form id="form-chat">
+
+                    <div id="chat">
+                    </div>
+
+                    <input id="chat-msg" class="form-chat-input" type="text" name="msg" required>
+
+                    <button class="btn btn-primary"> Enviar </button>
+                </form>
+
+
+            </div>
+        </div>
+
+        <script src="js/index.js" type="module"></script>
+
+</body>
+
+</html>
